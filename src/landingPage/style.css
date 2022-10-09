@@ -1,0 +1,9 @@
+.modo-claro {
+    background-color: #fff;
+    color: #000;
+}
+
+.container-topo {
+    display: flex;
+    justify-content: space-between;
+}

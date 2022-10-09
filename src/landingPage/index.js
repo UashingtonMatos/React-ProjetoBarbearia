@@ -1,10 +1,12 @@
+import './style.css';
+
 export default function LandingPage() {
 
     return (
         <div>
 
             <header>
-                <div>
+                <div className="container-topo limitar-secao">
                     <img src="assets/barbearia-logo.png" alt="logomarca" />
                     <button>
                         <img src='assets/moon.png' alt="icone" />
