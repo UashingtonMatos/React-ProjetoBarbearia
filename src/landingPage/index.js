@@ -1,16 +1,23 @@
 import './style.css';
+import { useState } from 'react';
 
 export default function LandingPage() {
 
+    const [ehTemaEscuro, setEhTemaEscuro] = useState(false);
+
+    const alterarTema = () => {
+        setEhTemaEscuro(!ehTemaEscuro);
+    }
+
     return (
-        <div>
+        <div className={ehTemaEscuro ? 'modo-escuro' : 'modo-claro'}>
 
             <header>
                 <div className="container-topo limitar-secao">
                     <img src="assets/barbearia-logo.png" alt="logomarca" />
-                    <button>
-                        <img src='assets/moon.png' alt="icone" />
-                        Dark
+                    <button onClick={alterarTema} className={ehTemaEscuro ? 'modo-escuro' : 'modo-claro'}>
+                        <img className="btn-icone" src={ehTemaEscuro ? 'assets/sun.png' : 'assets/moon.png'} alt="icone" />
+                        {ehTemaEscuro ? `Light` : `Dark`}
                     </button>
                 </div>
             </header>
